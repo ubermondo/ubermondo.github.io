@@ -16,4 +16,4 @@ This is a _slight_ modification of the excellent impress.js (https://github.com/
 * In index.html, both the development and the production (as of the time of this writing) versions of vue are noted; you can switch between them by commenting/uncommenting the appropriate lines in the file.
 * If you want to tweak fonts and colors, everything you need is in css/main.less. That file will also give a better idea of what you can do.
 
-###Thanks!
+**Thanks!**
