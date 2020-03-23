@@ -1,6 +1,6 @@
 # ubermondo.github.io
 
-This is a _slight_ modification of the excellent impress.js (https://github.com/impress/impress.js/). My version here uses less for the styling and vue to create slides as a JSON object.
+This is a _slight_ modification of the excellent impress.js (https://github.com/impress/impress.js/). My version here uses LESS for the styling and Vue to create slides as a JSON object.
 
 ## If you want to use this, here's a quick tour:
 
