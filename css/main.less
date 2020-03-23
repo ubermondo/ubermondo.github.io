@@ -1,0 +1,387 @@
+/* IMPORTS */
+@import url('https://fonts.googleapis.com/css?family=Hind:500,700&display=swap');
+/* /IMPORTS */
+
+/* RESET */
+html, body {
+	border: 0;
+	margin: 0;
+	padding: 0;
+  min-height: 100vh;
+}
+div, span, object, iframe, img, table, caption, thead, tbody,
+tfoot, tr, tr, td, article, aside, canvas, details, figure, hgroup, menu,
+nav, footer, header, section, summary, mark, audio, video {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, address, cit, code,
+del, dfn, em, ins, q, samp, small, strong, sub, sup, b, i, hr, dl, dt, dd,
+ol, ul, li, fieldset, legend, label {
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+}
+article, aside, canvas, figure, figure img, figcaption, hgroup,
+footer, header, nav, section, audio, video {
+	display: block;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  caption, th, td {
+    text-align: left;
+    vertical-align: middle;
+  }
+}
+a img {
+  border: 0;
+}
+:focus {
+  outline: 0;
+}
+/* /RESET */
+
+/* MIXINS */
+.text-shadow (@string: 0 1px 3px rgba(0, 0, 0, 0.25)) {
+	text-shadow: @string;
+}
+.box-shadow (@string) {
+	-webkit-box-shadow: @string;
+	-moz-box-shadow:    @string;
+	box-shadow:         @string;
+}
+.drop-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:	@x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:		@x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+.inner-shadow (@x: 0, @y: 1px, @blur: 2px, @spread: 0, @alpha: 0.25) {
+	-webkit-box-shadow: inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	-moz-box-shadow:    inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+	box-shadow:         inset @x @y @blur @spread rgba(0, 0, 0, @alpha);
+}
+.box-sizing (@type: border-box) {
+	-webkit-box-sizing: @type;
+	-moz-box-sizing:    @type;
+	box-sizing:         @type;
+}
+.border-radius (@radius: 1em) {
+	-webkit-border-radius: @radius;
+	-moz-border-radius:    @radius;
+	border-radius:         @radius;
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+.border-radiuses (@topright: 0, @bottomright: 0, @bottomleft: 0, @topleft: 0) {
+	-webkit-border-top-right-radius:    @topright;
+	-webkit-border-bottom-right-radius: @bottomright;
+	-webkit-border-bottom-left-radius:  @bottomleft;
+	-webkit-border-top-left-radius:     @topleft;
+	-moz-border-radius-topright:        @topright;
+	-moz-border-radius-bottomright:     @bottomright;
+	-moz-border-radius-bottomleft:      @bottomleft;
+	-moz-border-radius-topleft:         @topleft;
+	border-top-right-radius:            @topright;
+	border-bottom-right-radius:         @bottomright;
+	border-bottom-left-radius:          @bottomleft;
+	border-top-left-radius:             @topleft;
+	-moz-background-clip:    padding;
+	-webkit-background-clip: padding-box;
+	background-clip:         padding-box;
+}
+.opacity (@opacity: 0.5) {
+	-webkit-opacity: 	@opacity;
+	-moz-opacity: 		@opacity;
+	opacity: 		@opacity;
+}
+.gradient (@startColor: #eee, @endColor: white) {
+	background-color: @startColor;
+	background: -webkit-gradient(linear, left top, left bottom, from(@startColor), to(@endColor));
+	background: -webkit-linear-gradient(top, @startColor, @endColor);
+	background: -moz-linear-gradient(top, @startColor, @endColor);
+	background: -ms-linear-gradient(top, @startColor, @endColor);
+	background: -o-linear-gradient(top, @startColor, @endColor);
+}
+.horizontal-gradient (@startColor: #eee, @endColor: white) {
+ 	background-color: @startColor;
+	background-image: -webkit-gradient(linear, left top, right top, from(@startColor), to(@endColor));
+	background-image: -webkit-linear-gradient(left, @startColor, @endColor);
+	background-image: -moz-linear-gradient(left, @startColor, @endColor);
+	background-image: -ms-linear-gradient(left, @startColor, @endColor);
+	background-image: -o-linear-gradient(left, @startColor, @endColor);
+}
+.animation (@name, @duration: 300ms, @delay: 0, @ease: ease) {
+	-webkit-animation: @name @duration @delay @ease;
+	-moz-animation:    @name @duration @delay @ease;
+	-ms-animation:     @name @duration @delay @ease;
+}
+.transition (@transition) {
+	-webkit-transition: @transition;
+	-moz-transition:    @transition;
+	-ms-transition:     @transition;
+	-o-transition:      @transition;
+}
+.delay (@duration) {
+	-webkit-transition-delay: @duration;
+	-moz-transition-delay:    @duration;
+	-ms-transition-delay:     @duration;
+	-o-transition-delay:      @duration;
+	transition-delay:         @duration;
+}
+.transform(@string){
+	-webkit-transform: @string;
+	-moz-transform: 	 @string;
+	-ms-transform: 		 @string;
+	-o-transform: 		 @string;
+}
+.scale (@factor) {
+	-webkit-transform: scale(@factor);
+	-moz-transform: 	 scale(@factor);
+	-ms-transform: 		 scale(@factor);
+	-o-transform: 		 scale(@factor);
+}
+.rotate (@deg) {
+	-webkit-transform: rotate(@deg);
+	-moz-transform: 	 rotate(@deg);
+	-ms-transform: 		 rotate(@deg);
+	-o-transform: 		 rotate(@deg);
+}
+.skew (@deg, @deg2) {
+	-webkit-transform:       skew(@deg, @deg2);
+	-moz-transform: 	 skew(@deg, @deg2);
+	-ms-transform: 		 skew(@deg, @deg2);
+	-o-transform: 		 skew(@deg, @deg2);
+}
+.translate (@x, @y:0) {
+	-webkit-transform:       translate(@x, @y);
+	-moz-transform: 	 translate(@x, @y);
+	-ms-transform: 		 translate(@x, @y);
+	-o-transform: 		 translate(@x, @y);
+}
+.translate3d (@x, @y: 0, @z: 0) {
+	-webkit-transform:       translate3d(@x, @y, @z);
+	-moz-transform: 	 translate3d(@x, @y, @z);
+	-ms-transform: 		 translate3d(@x, @y, @z);
+	-o-transform: 		 translate3d(@x, @y, @z);
+}
+.perspective (@value: 1000) {
+	-webkit-perspective: 	@value;
+	-moz-perspective: 	@value;
+	-ms-perspective: 	@value;
+	perspective: 		@value;
+}
+.transform-origin (@x:center, @y:center) {
+	-webkit-transform-origin: @x @y;
+	-moz-transform-origin:    @x @y;
+	-ms-transform-origin:     @x @y;
+	-o-transform-origin:      @x @y;
+}
+/* /MIXINS */
+
+/* VARIABLES */
+@main: #222;
+@strong: #000;
+@info: #036;
+@inverse: #fff;
+@alt: #ccc;
+@warning: #900;
+/* /VARIABLES */
+
+/* IMPRESS */
+.fallback-message {
+  width: 50vw;
+  color: @inverse;
+  padding: 1em;
+  margin: 2em auto;
+  border: 1px solid @main;
+  .border-radius;
+  background: @warning;
+}
+.impress-supported .fallback-message {
+  display: none;
+}
+.step {
+  position: relative;
+  width: 900px;
+  padding: 40px;
+  margin: 20px auto;
+  .box-sizing(border-box);
+  font-size: 48px;
+}
+.impress-enabled {
+  pointer-events: none;
+  .step {
+    margin: 0;
+    .opacity(0.3);
+    .transition(opacity 1s);
+    &.active {
+      .opacity(1);
+    }
+  }
+  #impress, #impress-toolbar, #impress-console-button {
+    pointer-events: auto;
+  }
+  #impress-toolbar {
+    position: fixed;
+    right: 1px;
+    bottom: 1px;
+    .opacity(0.5);
+    span {
+      margin-right: 10px;
+    }
+  }
+}
+.impress-mouse-timeout {
+  cursor: none;
+  #impress-toolbar {
+    display: none;
+  }
+}
+#overview {
+  display: none
+}
+.impress-on-overview .step {
+  .opacity(0.8);
+  cursor: pointer;
+}
+.quote {
+  display: block;
+  width: 900px;
+  height: 700px;
+  padding: 40px 60px;
+  background-color: @inverse;
+  border: 1px solid rgba(0, 0, 0, .3);
+  .border-radius(10px);
+  .box-shadow(0 2px 6px rgba(0, 0, 0, .1));
+  color: @main;
+  .text-shadow(0 2px 2px rgba(0, 0, 0, .1));
+  font-size: 30px;
+  line-height: 1.2em;
+  q, blockquote {
+		color: @info;
+    display: block;
+    text-transform: none;
+    font-size: 50px;
+    line-height: 1.2em;
+    margin-top: 100px;
+    strong {
+      white-space: nowrap;
+    }
+    footer {
+      font-style: italic;
+      text-align: right;
+      display: block;
+      &:before {
+        content: "- ";
+        line-height: 2em;
+      }
+    }
+  }
+  blockquote {
+    margin-top: 0;
+    font-size: 40px;
+  }
+}
+/* /IMPRESS */
+
+/* TEXT */
+body {
+  font-family: 'Hind', arial, sans-serif;
+  line-height: 1.5;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+strong, h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: @strong;
+}
+a {
+  color: @info;
+  text-decoration: none;
+  .transition(0.5s);
+  &:hover, &:focus {
+    color: @strong;
+    .text-shadow;
+  }
+}
+/* /TEXT */
+
+/* GENERAL */
+body {
+  .gradient(@inverse, @alt);
+}
+/* /GENERAL */
+
+/* SPECIFIC */
+.title {
+	padding: 0;
+	header {
+		font-size: 64px;
+		position: absolute;
+		top: -0.5em;
+		left: 1.5em;
+		.transform(translateZ(20px));
+	}
+	h1 {
+		font-size: 180px;
+		.transform(translateZ(50px));
+	}
+	footer {
+		font-size: 32px;
+	}
+}
+.big, .tiny {
+	text-align: center;
+}
+.big {
+	width: 600px;
+	font-size: 60px;
+	line-height: 1;
+	strong, b {
+		display: block;
+		font-size: 250px;
+	}
+	span {
+		font-size: 90px;
+	}
+}
+.tiny {
+	width: 500px;
+	text-transform: lowercase;
+}
+/* /SPECIFIC */
+
+/* EFFECTS */
+.present {
+	.shift, .spin, .size {
+		display: inline-block;
+		.transition(0.5s);
+	}
+	.shift {
+		.transform(translateY(-10px));
+	}
+	.spin {
+		.rotate(-10deg);
+	}
+	.size {
+		.scale(0.7);
+	}
+	.wait {
+		&.short {
+			.delay(0.25s);
+		}
+		&.medium {
+			.delay(0.5s);
+		}
+		&.long {
+			.delay(0.75s);
+		}
+	}
+}
+/* /EFFECTS */
