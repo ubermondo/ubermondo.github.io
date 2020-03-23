@@ -217,6 +217,7 @@ var app = new Vue({
 });
 
 /*
+//EMPTY OBJECT, FOR COPY/PASTE
 {
   id: "",
   classes: [],
@@ -226,24 +227,41 @@ var app = new Vue({
     z: 0
   },
   rotate: {
-    prime: 0,
     x: 0,
-    y: 0
+    y: 0,
+    z: 0,
   },
   scale: 0,
   payload: `
   `
 }
 
-So to summarize of all the possible attributes used to position presentation steps, we have:
-
-* `data-x`, `data-y`, `data-z` - they define the position of **the center** of step element on
-    the canvas in pixels; their default value is 0;
-* `data-rotate-x`, `data-rotate-y`, 'data-rotate-z`, `data-rotate` - they define the rotation of
-    the element around given axis in degrees; their default value is 0; `data-rotate` and `data-rotate-z`
-    are exactly the same;
-* `data-scale` - defines the scale of step element; default value is 1
-
-These values are used by impress.js in CSS transformation functions, so for more information consult
-CSS transfrom docs: https://developer.mozilla.org/en/CSS/transform
+//EXAMPLE OBJECT
+{
+  id: "myslide", //should be unique; NOT OPTIONAL
+  classes: [ //can send empty array here - some example classes below (you wouldn't want to use all of these in the same slide):
+    "quote", //makes the slide appear like a traditional slide, with border, etc.
+    "title", //used to make the main title of the presentation; you proably only one of these in your deck.
+    "big", //I bet you can guess what this one does.
+    "tiny", //please see previous note.
+    //you can also add any other css classes you want here, naturally.
+  ],
+  coordinates: { //the position of the CENTER of the slide on the canvas (in pixels); default for each value is 0. Do not need to populate all three values.
+    x: 0,
+    y: 0,
+    z: 0
+  },
+  rotate: { //the rotation of the slide; default value is 0, and you don't need to send all three.
+    x: 0,
+    y: 0,
+    z: 0,
+  },
+  scale: 0, //scale of the element; default value is 1.
+  payload: `
+    <h1>This is an example.</h1>
+    <p>You can put any HTML here that you like.</p>
+    <p>You can also add some inline classes to animate <b class="shift">position</b>, <b class="spin wait short">rotation</b> and <b class="size wait medium">scale</b>.</p>
+    <p>(you probably already noticed that there are "short," "medium," and "long" classes that delay the animation. For more details, check out the css/main.less file.)</p>
+  `
+}
 */
