@@ -217,7 +217,7 @@ a img {
   pointer-events: none;
   .step {
     margin: 0;
-    .opacity(0.3);
+    .opacity(0.05);
     .transition(opacity 1s);
     &.active {
       .opacity(1);
@@ -319,6 +319,9 @@ body {
 /* /GENERAL */
 
 /* SPECIFIC */
+.hidden {
+	display: none;
+}
 .title {
 	padding: 0;
 	header {
@@ -331,9 +334,10 @@ body {
 	h1 {
 		font-size: 180px;
 		.transform(translateZ(50px));
+		white-space: nowrap;
 	}
 	footer {
-		font-size: 32px;
+		font-size: 28px;
 	}
 }
 .big, .tiny {

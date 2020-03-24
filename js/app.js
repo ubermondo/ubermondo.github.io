@@ -9,7 +9,8 @@ var app = new Vue({
         ],
         coordinates: {
           x: -1000,
-          y: -1500
+          y: -1500,
+          z: 0
         },
         rotate: {},
         payload: `
@@ -20,59 +21,46 @@ var app = new Vue({
         `
       },
       {
-        id: "wouldyoulike",
-        classes: [
-          "quote"
-        ],
-        coordinates: {
-          x: 1000,
-          y: -1500
-        },
-        rotate: {},
-        payload: `
-          <q>Would you like to <strong>impress your audience</strong> with <strong>stunning visualization</strong> of your talk?</q>
-        `
-      },
-      {
-        id: "title",
-        classes: [
-          "title"
-        ],
-        coordinates: {
-          x: 0,
-          y: 0
-        },
-        rotate: {},
-        scale: 4,
-        payload: `
-          <header>then you should try</header>
-          <h1>impress.js<sup>*</sup></h1>
-          <footer><sup>*</sup> no rhyme intended</footer>
-        `
-      },
-      {
-        id: "its",
+        id: "story_breakdown",
         classes: [],
         coordinates: {
-          x: 850,
-          y: 3000
+          x: 500,
+          y: 500
         },
         rotate: {
           z: 90
         },
-        scale: 5,
+        scale: 1,
         payload: `
-          <p>
-            It’s a <strong>presentation tool</strong>
-            <br/>
-            inspired by the idea behind <a href="http://prezi.com">prezi.com</a>
-            <br/>
-            and based on the <strong>power of CSS3 transforms and transitions</strong> in modern browsers.
-          </p>
+          <h2>The Breakdown:</h2>
+          <ul>
+            <li>Right after Passover</li>
+            <li>Food Court</li>
+            <li><strong>(Showtime)</strong></li>
+            <li><q>Zeal for your House will consume me</q></em>
+          </ul>
         `
       },
       {
-        id: "big",
+        id: "feelings",
+        classes: [
+          "tiny"
+        ],
+        coordinates: {
+          x: 600,
+          y: 600,
+          z: -3000
+        },
+        rotate: {
+          z: 360
+        },
+        scale: 1,
+        payload: `
+          <p>how does that make you <em class="size">feel?</em></p>
+        `
+      },
+      {
+        id: "justified",
         classes: [
           "big"
         ],
@@ -85,59 +73,87 @@ var app = new Vue({
         },
         scale: 6,
         payload: `
-          <p>visualize your <b>big</b> <span>thoughts</span></p>
+          <p>
+            anger is
+            <strong>valid</strong>
+            <span>it's just not the point</span>
+          </p>
         `
       },
       {
-        id: "tiny",
-        classes: [
-          "tiny"
-        ],
+        id: "timing",
+        classes: [],
         coordinates: {
-          x: 2825,
-          y: 2325,
-          z: -3000
+          x: 6000,
+          y: 3000
         },
         rotate: {
-          z: 300
+          z: 90
         },
-        scale: 1,
+        scale: 5,
         payload: `
-          <p>(and <b>tiny</b> ideas.)</p>
+          <p>
+            <h2>after all:</h2>
+            Jesus took His time
+            <br />
+            <strong>and <em>nobody</em> called the cops</strong>
+          </p>
         `
       },
       {
-        id: "bored",
+        id: "title",
+        classes: [
+          "title"
+        ],
+        coordinates: {
+          x: 0,
+          y: -1000
+        },
+        rotate: {},
+        scale: 3,
+        payload: `
+          <header>we want to live</header>
+          <h1>on purpose</h1>
+          <footer>miracles start when we make room</footer>
+        `
+      },
+      {
+        id: "passover",
+        classes: [],
+        coordinates: {
+          x: 250,
+          y: 3000
+        },
+        rotate: {
+          z: 270
+        },
+        scale: 5,
+        payload: `
+          <p>
+            Passover is <strong>tradition,</strong> <strong>freedom,</strong> and <em>something else</em>
+          </p>
+        `
+      },
+      {
+        id: "tp_parable",
         classes: [
           "quote"
         ],
         coordinates: {
           x: 0,
-          y: -1500
+          y: -1500,
+          z: 0
         },
         rotate: {},
         payload: `
-          <q>Aren’t you just <b>bored</b> with all those slides-based presentations?</q>
+          <p>
+            <em>And now:</em>
+          </p>
+          <h1>The Parable of the Toilet Paper</h1>
         `
       },
       {
-        id: "ing",
-        classes: [],
-        coordinates: {
-          x: 3500,
-          y: -850,
-          z: 0
-        },
-        rotate: {
-          z: 270
-        },
-        scale: 6,
-        payload: `
-          <p>by <b class="shift">positioning</b>, <b class="spin wait short">rotating</b> and <b class="size wait medium">scaling</b> them on an infinite canvas</p>
-        `
-      },
-      {
-        id: "imagination",
+        id: "needful",
         classes: [],
         coordinates: {
           x: 6700,
@@ -146,54 +162,120 @@ var app = new Vue({
         rotate: {},
         scale: 6,
         payload: `
-          <p>the only <b>limit</b> is your <b class="imagination">imagination</b></p>
+          <p>
+            There is a perfect tool for every job
+          </p>
+          <p>
+            <strong>You know what you need to do</strong>
+          </p>
         `
       },
       {
-        id: "source",
+        id: "economic",
         classes: [],
         coordinates: {
-          x: 6300,
+          x: 7700,
           y: 2000
         },
         rotate: {
-          z: 20
+          z: 180
         },
         scale: 4,
         payload: `
-          <p>want to know more?</p>
-          <q><a href="http://github.com/impress/impress.js">use the source</a>, Luke!</q>
+          <h1>The Revolution is <em>Economic</em></h1>
         `
       },
       {
-        id: "one-more-thing",
-        classes: [],
+        id: "zeal",
+        classes: [
+          "tiny"
+        ],
         coordinates: {
           x: 6000,
-          y: 4000
+          y: 4000,
+          z: -2000
         },
         rotate: {},
         scale: 2,
         payload: `
-          <p>one more thing...</p>
+          <p>so, <em>zeal?</em></p>
         `
       },
       {
-        id: "its-in-3d",
+        id: "normal",
+        classes: [
+          "big"
+        ],
+        coordinates: {
+          x: -2500,
+          y: 2000
+        },
+        rotate: {
+          z: 90
+        },
+        scale: 4,
+        payload: `
+          <p>
+            <strong>Normal</strong>
+            <span>might not be what you think it is</span>
+          </p>
+        `
+      },
+      {
+        id: "fall",
         classes: [],
         coordinates: {
-          x: 6200,
-          y: 4300,
+          x: 7000,
+          y: 1000,
+          z: 0 //z: -100
+        },
+        rotate: {
+          z: 270
+        },
+        scale: 1,
+        payload: `
+          <p>
+            sometimes you have to bring down the house to lift up the home
+          </p>
+        `
+      },
+      {
+        id: "rise",
+        classes: [],
+        coordinates: {
+          x: 7200,
+          y: 1000,
           z: -100
         },
         rotate: {
-          x: -40,
-          y: 10
+          y: 40,
+          z: 270
         },
-        scale: 2,
+        scale: 1,
         payload: `
-          <p>have you noticed it's in <b>3D<sup>*</sup></b>?</p>
-          <span class="footnote"><sup>*</sup>beat that, prezi ;)</span>
+          <p>
+            <em>(but you have a choice about how that gets done)</em>
+          </p>
+        `
+      },
+      {
+        id: "process",
+        classes: [
+          "quote"
+        ],
+        coordinates: {
+          x: 1000,
+          y: -1500,
+          z: 0
+        },
+        rotate: {},
+        payload: `
+          <h1>The Process:</h1>
+          <ol>
+            <li>Give thanks for your <strong>freedom</strong> and <strong>connection</strong></li>
+            <li>Recognize that there's <strong>work</strong> to be done</li>
+            <li><strong>do.<br />the.<br />work.</strong>
+          </ol>
         `
       },
       {
@@ -217,7 +299,7 @@ var app = new Vue({
 });
 
 /*
-//EMPTY OBJECT, FOR COPY/PASTE
+//EMPTY SLIDE OBJECT, FOR COPY/PASTE
 {
   id: "",
   classes: [],
@@ -236,7 +318,7 @@ var app = new Vue({
   `
 }
 
-//EXAMPLE OBJECT
+//EXAMPLE SLIDE OBJECT
 {
   id: "myslide", //should be unique; NOT OPTIONAL
   classes: [ //can send empty array here - some example classes below (you wouldn't want to use all of these in the same slide):
@@ -262,6 +344,19 @@ var app = new Vue({
     <p>You can put any HTML here that you like.</p>
     <p>You can also add some inline classes to animate <b class="shift">position</b>, <b class="spin wait short">rotation</b> and <b class="size wait medium">scale</b>.</p>
     <p>(you probably already noticed that there are "short," "medium," and "long" classes that delay the animation. For more details, check out the css/main.less file.)</p>
+  `
+},
+{ //you almost certainly want an "overview" slide at the end of your deck.
+  id: "overview",
+  classes: [],
+  coordinates: {
+    x: 3000,
+    y: 1500,
+    z: 0
+  },
+  rotate: {},
+  scale: 10,
+  payload: `
   `
 }
 */
