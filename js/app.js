@@ -279,19 +279,6 @@ var app = new Vue({
         `
       },
       {
-        id: "overview",
-        classes: [],
-        coordinates: {
-          x: 3000,
-          y: 1500,
-          z: 0
-        },
-        rotate: {},
-        scale: 10,
-        payload: `
-        `
-      },
-      {
         id: "signoff",
         classes: [],
         coordinates: {
@@ -309,6 +296,19 @@ var app = new Vue({
             <br />
             <strong>Freedom is a Choice.</strong>
           </p>
+        `
+      },
+      {
+        id: "overview",
+        classes: [],
+        coordinates: {
+          x: 3000,
+          y: 1500,
+          z: 0
+        },
+        rotate: {},
+        scale: 10,
+        payload: `
         `
       }
     ]
