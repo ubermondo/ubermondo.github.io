@@ -112,8 +112,8 @@ var app = new Vue({
         rotate: {},
         scale: 3,
         payload: `
-          <header>we want to live</header>
-          <h1>on purpose</h1>
+          <header>we want to live on</header>
+          <h1>purpose</h1>
           <footer>miracles start when we make room</footer>
         `
       },
