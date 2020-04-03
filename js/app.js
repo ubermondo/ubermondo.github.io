@@ -15,8 +15,8 @@ var app = new Vue({
         rotate: {},
         payload: `
           <blockquote>
-            And He made a scourge of cords, and drove them all out of the temple, with the sheep and the oxen; and He poured out the coins of the money changers and overturned their tables; and to those who were selling the doves He said, "Take these things away; stop making My Father's house a place of business."
-            <footer>John 2:15-16, NASB</footer>
+            Some of the Pharisees in the crowd said to Him, "Teacher, rebuke Your disciples." But Jesus answered, "I tell you, if these become silent, the stones will cry out!"
+            <footer>Luke 19:39-40, NASB</footer>
           </blockquote>
         `
       },
@@ -32,12 +32,12 @@ var app = new Vue({
         },
         scale: 1,
         payload: `
-          <h2>The Breakdown:</h2>
+          <h2>This Story Has <em>Everything:</em></h2>
           <ul>
-            <li>Right after Passover</li>
-            <li>Food Court</li>
-            <li><strong>(Showtime)</strong></li>
-            <li><q>Zeal for your House will consume me</q></em>
+            <li>Donkey Transportation</li>
+            <li>Eastern Gate</li>
+            <li>Palm Fronds</li>
+            <li>Ladies and Gentlemen,<br /><strong>The Stones</strong></li>
           </ul>
         `
       },
@@ -56,11 +56,11 @@ var app = new Vue({
         },
         scale: 1,
         payload: `
-          <p>how does that make you <em class="size">feel?</em></p>
+          <p>we just want to feel <b class="spin">special</p>
         `
       },
       {
-        id: "justified",
+        id: "conscious",
         classes: [
           "big"
         ],
@@ -74,14 +74,14 @@ var app = new Vue({
         scale: 6,
         payload: `
           <p>
-            anger is
-            <strong>valid</strong>
-            <span>it's just not the point</span>
+            this trip was
+            <strong>conscious</strong>
+            <span>not pedestrian</span>
           </p>
         `
       },
       {
-        id: "timing",
+        id: "pattern",
         classes: [],
         coordinates: {
           x: 6000,
@@ -93,10 +93,8 @@ var app = new Vue({
         scale: 5,
         payload: `
           <p>
-            <h2>after all:</h2>
-            Jesus took His time
-            <br />
-            <strong>and <em>nobody</em> called the cops</strong>
+            <h2>it's time for a miracle</h2>
+            and here is the manual
           </p>
         `
       },
@@ -112,13 +110,33 @@ var app = new Vue({
         rotate: {},
         scale: 3,
         payload: `
-          <header>we want to live on</header>
-          <h1>purpose</h1>
-          <footer>miracles start when we make room</footer>
+          <header>the trick is to make the</header>
+          <h1>connection</h1>
+          <footer>you are the proof you've been looking for</footer>
         `
       },
       {
-        id: "passover",
+        id: "scripture_blueprint",
+        classes: [
+          "quote"
+        ],
+        coordinates: {
+          x: 0,
+          y: -1500,
+          z: 0
+        },
+        rotate: {},
+        payload: `
+          <h1>The Blueprint for Miracles:</h1>
+          <ol>
+            <li><strong>See</strong> What's There</li>
+            <li><strong>Act</strong> Out Your Faith</li>
+            <li><strong>Experience</strong> Results</li>
+          </ol>
+        `
+      },
+      {
+        id: "inverse",
         classes: [],
         coordinates: {
           x: 250,
@@ -130,30 +148,12 @@ var app = new Vue({
         scale: 5,
         payload: `
           <p>
-            Passover is <strong>tradition,</strong> <strong>freedom,</strong> and <em>something else</em>
+            this is a <strong>180&deg;</strong> from what we're used to
           </p>
         `
       },
       {
-        id: "tp_parable",
-        classes: [
-          "quote"
-        ],
-        coordinates: {
-          x: 0,
-          y: -1500,
-          z: 0
-        },
-        rotate: {},
-        payload: `
-          <p>
-            <em>And now:</em>
-          </p>
-          <h1>The Parable of the Toilet Paper</h1>
-        `
-      },
-      {
-        id: "needful",
+        id: "reboot",
         classes: [],
         coordinates: {
           x: 6700,
@@ -163,15 +163,15 @@ var app = new Vue({
         scale: 6,
         payload: `
           <p>
-            There is a perfect tool for every job
+            it's time for a reboot;
           </p>
           <p>
-            <strong>You know what you need to do</strong>
+            <strong>a bigger life is calling</strong>
           </p>
         `
       },
       {
-        id: "economic",
+        id: "material_proof",
         classes: [],
         coordinates: {
           x: 7700,
@@ -182,11 +182,11 @@ var app = new Vue({
         },
         scale: 4,
         payload: `
-          <h1>The Revolution is <em>Economic</em></h1>
+          <h1>proof is fine, but <em>limited</em></h1>
         `
       },
       {
-        id: "zeal",
+        id: "temporal",
         classes: [
           "tiny"
         ],
@@ -198,11 +198,11 @@ var app = new Vue({
         rotate: {},
         scale: 2,
         payload: `
-          <p>so, <em>zeal?</em></p>
+          <p>there's also a <em>timing</em> issue</p>
         `
       },
       {
-        id: "normal",
+        id: "switch",
         classes: [
           "big"
         ],
@@ -216,13 +216,14 @@ var app = new Vue({
         scale: 4,
         payload: `
           <p>
-            <strong>Normal</strong>
-            <span>might not be what you think it is</span>
+            make the
+            <strong>Switch</strong>
+            <span>what you see is what you get</span>
           </p>
         `
       },
       {
-        id: "fall",
+        id: "connections",
         classes: [],
         coordinates: {
           x: 7000,
@@ -235,12 +236,12 @@ var app = new Vue({
         scale: 1,
         payload: `
           <p>
-            sometimes you have to bring down the house to lift up the home
+            we know that it's all <strong>vital</strong> and <strong>connected</strong>
           </p>
         `
       },
       {
-        id: "rise",
+        id: "metaphysical",
         classes: [],
         coordinates: {
           x: 7200,
@@ -254,12 +255,12 @@ var app = new Vue({
         scale: 1,
         payload: `
           <p>
-            <em>(but you have a choice about how that gets done)</em>
+            <em>(now let's take that to a deeper level)</em>
           </p>
         `
       },
       {
-        id: "process",
+        id: "deal",
         classes: [
           "quote"
         ],
@@ -270,12 +271,12 @@ var app = new Vue({
         },
         rotate: {},
         payload: `
-          <h1>The Process:</h1>
-          <ol>
-            <li>Give thanks for your <strong>freedom</strong> and <strong>connection</strong></li>
-            <li>Recognize that there's <strong>work</strong> to be done</li>
-            <li><strong>do.<br />the.<br />work.</strong>
-          </ol>
+          <h1>The Deal:</h1>
+          <ul>
+            <li><em>Prophecy,</em> not Proof</li>
+            <li><em>Choose</em> what you respond to</li>
+            <li><strong>Banners are Blessed</strong></li>
+          </ul>
         `
       },
       {
