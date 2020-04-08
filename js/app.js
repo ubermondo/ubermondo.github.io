@@ -1,7 +1,8 @@
 var app = new Vue({
   el: '#impress',
-  data: {
-    slides: [
+  data: function() {
+    return {
+      slides: [
       {
         id: "scripture",
         classes: [
@@ -313,6 +314,7 @@ var app = new Vue({
         `
       }
     ]
+    }
   },
   mounted() {
     impress().init();
