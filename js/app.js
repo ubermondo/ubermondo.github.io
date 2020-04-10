@@ -16,8 +16,8 @@ var app = new Vue({
         rotate: {},
         payload: `
           <blockquote>
-            Some of the Pharisees in the crowd said to Him, "Teacher, rebuke Your disciples." But Jesus answered, "I tell you, if these become silent, the stones will cry out!"
-            <footer>Luke 19:39-40, NASB</footer>
+            And he said to them, "Do not be amazed; you are looking for Jesus the Nazarene, who has been crucified. He has risen; He is not here; behold, here is the place where they laid Him. But go, tell His disciples and Peter, 'He is going ahead of you to Galilee; there you will see Him, just as He told you.'"
+            <footer>Mark 16:6-7, NASB</footer>
           </blockquote>
         `
       },
@@ -33,35 +33,16 @@ var app = new Vue({
         },
         scale: 1,
         payload: `
-          <h2>This Story Has <em>Everything:</em></h2>
-          <ul>
-            <li>Donkey Transportation</li>
-            <li>Eastern Gate</li>
-            <li>Palm Fronds</li>
-            <li>Ladies and Gentlemen,<br /><strong>The Stones</strong></li>
-          </ul>
+          <h2>Life Wins.</h2>
+          <p>
+            This is the culmination of
+            <br />
+            <em>His</em> ministry and <em>our</em> experience.
+          </p>
         `
       },
       {
-        id: "feelings",
-        classes: [
-          "tiny"
-        ],
-        coordinates: {
-          x: 600,
-          y: 600,
-          z: -3000
-        },
-        rotate: {
-          z: 360
-        },
-        scale: 1,
-        payload: `
-          <p>we just want to feel <b class="spin">special</p>
-        `
-      },
-      {
-        id: "conscious",
+        id: "reality",
         classes: [
           "big"
         ],
@@ -75,14 +56,32 @@ var app = new Vue({
         scale: 6,
         payload: `
           <p>
-            this trip was
-            <strong>conscious</strong>
-            <span>not pedestrian</span>
+            this was real.
+            <strong>it happened.</strong>
+            <span>life <em>and</em> death.</span>
           </p>
         `
       },
       {
-        id: "pattern",
+        id: "fixation",
+        classes: [
+          "tiny"
+        ],
+        coordinates: {
+          x: 600,
+          y: 600,
+          z: -3000
+        },
+        rotate: {
+          z: 360
+        },
+        scale: 1,
+        payload: `
+          <p>which part do you <b class="size">see?</b></p>
+        `
+      },
+      {
+        id: "acceptance",
         classes: [],
         coordinates: {
           x: 6000,
@@ -94,8 +93,8 @@ var app = new Vue({
         scale: 5,
         payload: `
           <p>
-            <h2>it's time for a miracle</h2>
-            and here is the manual
+            <h2>we get what we expect</h2>
+            what has room in your life?
           </p>
         `
       },
@@ -111,13 +110,13 @@ var app = new Vue({
         rotate: {},
         scale: 3,
         payload: `
-          <header>the trick is to make the</header>
-          <h1>connection</h1>
-          <footer>you are the proof you've been looking for</footer>
+          <header>what part of this is</header>
+          <h1>amazing?</h1>
+          <footer>Be delighted. Be grateful. Just don't be surprised.</footer>
         `
       },
       {
-        id: "scripture_blueprint",
+        id: "absence",
         classes: [
           "quote"
         ],
@@ -128,16 +127,14 @@ var app = new Vue({
         },
         rotate: {},
         payload: `
-          <h1>The Blueprint for Miracles:</h1>
-          <ol>
-            <li><strong>See</strong> What's There</li>
-            <li><strong>Act</strong> Out Your Faith</li>
-            <li><strong>Experience</strong> Results</li>
-          </ol>
+          <h1>"It's Gone."</h1>
+          <p>Instead of fixating on creation, this story is about proof through <em>absence.</em></p>
+          <p>&nbsp;</p>
+          <p>Your life is <strong>full</strong> of empty tombs.</p>
         `
       },
       {
-        id: "inverse",
+        id: "evidence",
         classes: [],
         coordinates: {
           x: 250,
@@ -149,12 +146,12 @@ var app = new Vue({
         scale: 5,
         payload: `
           <p>
-            this is a <strong>180&deg;</strong> from what we're used to
+            <strong>everything</strong> is a footprint
           </p>
         `
       },
       {
-        id: "reboot",
+        id: "redux",
         classes: [],
         coordinates: {
           x: 6700,
@@ -164,15 +161,15 @@ var app = new Vue({
         scale: 6,
         payload: `
           <p>
-            it's time for a reboot;
+            lift up your vision
           </p>
           <p>
-            <strong>a bigger life is calling</strong>
+            <strong>do not be amazed</strong>
           </p>
         `
       },
       {
-        id: "material_proof",
+        id: "guides",
         classes: [],
         coordinates: {
           x: 7700,
@@ -183,11 +180,11 @@ var app = new Vue({
         },
         scale: 4,
         payload: `
-          <h1>proof is fine, but <em>limited</em></h1>
+          <h1>there are guides in every story</h1>
         `
       },
       {
-        id: "temporal",
+        id: "solitude",
         classes: [
           "tiny"
         ],
@@ -199,11 +196,11 @@ var app = new Vue({
         rotate: {},
         scale: 2,
         payload: `
-          <p>there's also a <em>timing</em> issue</p>
+          <p>you were <em>never</em> alone</p>
         `
       },
       {
-        id: "switch",
+        id: "mantra",
         classes: [
           "big"
         ],
@@ -217,14 +214,14 @@ var app = new Vue({
         scale: 4,
         payload: `
           <p>
-            make the
-            <strong>Switch</strong>
-            <span>what you see is what you get</span>
+            look for
+            <strong>one true thing</strong>
+            <span>it's always there</span>
           </p>
         `
       },
       {
-        id: "connections",
+        id: "message",
         classes: [],
         coordinates: {
           x: 7000,
@@ -237,12 +234,12 @@ var app = new Vue({
         scale: 1,
         payload: `
           <p>
-            we know that it's all <strong>vital</strong> and <strong>connected</strong>
+            life and healing is at the core
           </p>
         `
       },
       {
-        id: "metaphysical",
+        id: "transition",
         classes: [],
         coordinates: {
           x: 7200,
@@ -256,7 +253,7 @@ var app = new Vue({
         scale: 1,
         payload: `
           <p>
-            <em>(now let's take that to a deeper level)</em>
+            from <em>possible</em> to <em>probable</em> to <strong>certain</strong>
           </p>
         `
       },
@@ -272,11 +269,11 @@ var app = new Vue({
         },
         rotate: {},
         payload: `
-          <h1>The Deal:</h1>
+          <h1>The Beginning:</h1>
           <ul>
-            <li><em>Prophecy,</em> not Proof</li>
-            <li><em>Choose</em> what you respond to</li>
-            <li><strong>Banners are Blessed</strong></li>
+            <li>The tomb is empty</li>
+            <li>You are not alone</li>
+            <li><strong>Do Not Be Amazed</strong></li>
           </ul>
         `
       },
