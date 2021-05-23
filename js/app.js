@@ -1,321 +1,327 @@
 var app = new Vue({
-  el: '#impress',
-  data: function() {
+  el: "#impress",
+  data: function () {
     return {
       slides: [
-      {
-        id: "scripture",
-        classes: [
-          "quote"
-        ],
-        coordinates: {
-          x: -1000,
-          y: -1500,
-          z: 0
+        {
+          id: "0",
+          classes: ["quote"],
+          coordinates: {
+            x: -1000,
+            y: -1500,
+            z: 0,
+          },
+          rotate: {},
+          payload: `
+            <h1>The Cheesecake Factory is not your friend.</h1>
+            <p>&nbsp;</p>
+            <p>(it's in the <em>name.</em>)</p>
+          `,
         },
-        rotate: {},
-        payload: `
-          <blockquote>
-            And he said to them, "Do not be amazed; you are looking for Jesus the Nazarene, who has been crucified. He has risen; He is not here; behold, here is the place where they laid Him. But go, tell His disciples and Peter, 'He is going ahead of you to Galilee; there you will see Him, just as He told you.'"
-            <footer>Mark 16:6-7, NASB</footer>
-          </blockquote>
-        `
-      },
-      {
-        id: "story_breakdown",
-        classes: [],
-        coordinates: {
-          x: 500,
-          y: 500
+        {
+          id: "1",
+          classes: ["quote"],
+          coordinates: {
+            x: 0,
+            y: -1500,
+            z: 0,
+          },
+          rotate: {},
+          payload: `
+            <h1>Questions:</h1>
+            <ul>
+              <li>who <em>built</em> this?</li>
+              <li>can I have a <em>bookmark?</em></li>
+              <li>is this <em>wicker?</em></li>
+            </ul>
+          `,
         },
-        rotate: {
-          z: 90
+        {
+          id: "2",
+          classes: ["big"],
+          coordinates: {
+            x: 3500,
+            y: 2100,
+          },
+          rotate: {
+            z: 180,
+          },
+          scale: 6,
+          payload: `
+            <p>
+              you're not here for the
+              <strong>food.</strong>
+              <span>you're here to be</span>
+              <strong>confused.</strong>
+            </p>
+          `,
         },
-        scale: 1,
-        payload: `
-          <h2>Life Wins.</h2>
-          <p>
-            This is the culmination of
-            <br />
-            <em>His</em> ministry and <em>our</em> experience.
-          </p>
-        `
-      },
-      {
-        id: "reality",
-        classes: [
-          "big"
-        ],
-        coordinates: {
-          x: 3500,
-          y: 2100
+        {
+          id: "3",
+          classes: [],
+          coordinates: {
+            x: 7000,
+            y: 1000,
+            z: 0,
+          },
+          rotate: {
+            z: 270,
+          },
+          scale: 1,
+          payload: `
+            <p>
+              the <em class="spin wait short">sensory overload</em> approach.
+            </p>
+          `,
         },
-        rotate: {
-          z: 180
+        {
+          id: "4",
+          classes: [],
+          coordinates: {
+            x: 7200,
+            y: 1000,
+            z: -100,
+          },
+          rotate: {
+            y: 40,
+            z: 270,
+          },
+          scale: 1,
+          payload: `
+            <p>
+              powered by <em>larceny.</em>
+            </p>
+          `,
         },
-        scale: 6,
-        payload: `
-          <p>
-            this was real.
-            <strong>it happened.</strong>
-            <span>life <em>and</em> death.</span>
-          </p>
-        `
-      },
-      {
-        id: "fixation",
-        classes: [
-          "tiny"
-        ],
-        coordinates: {
-          x: 600,
-          y: 600,
-          z: -3000
+        {
+          id: "5",
+          classes: [],
+          coordinates: {
+            x: 250,
+            y: 3000,
+          },
+          rotate: {
+            z: 270,
+          },
+          scale: 5,
+          payload: `
+            <p>
+              the insane trade
+            </p>
+          `,
         },
-        rotate: {
-          z: 360
+        {
+          id: "6",
+          classes: [],
+          coordinates: {
+            x: 500,
+            y: 500,
+          },
+          rotate: {
+            z: 90,
+          },
+          scale: 1,
+          payload: `
+            <h2>Secrets are the Commodity</h2>
+            <p class="size">
+              (top tricks experts don't want you to know about)
+            </p>
+          `,
         },
-        scale: 1,
-        payload: `
-          <p>which part do you <b class="size">see?</b></p>
-        `
-      },
-      {
-        id: "acceptance",
-        classes: [],
-        coordinates: {
-          x: 6000,
-          y: 3000
+        {
+          id: "7",
+          classes: ["tiny"],
+          coordinates: {
+            x: 600,
+            y: 600,
+            z: -3000,
+          },
+          rotate: {
+            z: 360,
+          },
+          scale: 1,
+          payload: `
+            <p>wrongness is the currency</p>
+          `,
         },
-        rotate: {
-          z: 90
+        {
+          id: "8",
+          classes: [],
+          coordinates: {
+            x: 6000,
+            y: 3000,
+          },
+          rotate: {
+            z: 90,
+          },
+          scale: 5,
+          payload: `
+            <p>
+              <h2>response to the "other"</h2>
+              and hair care tips
+            </p>
+          `,
         },
-        scale: 5,
-        payload: `
-          <p>
-            <h2>we get what we expect</h2>
-            what has room in your life?
-          </p>
-        `
-      },
-      {
-        id: "title",
-        classes: [
-          "title"
-        ],
-        coordinates: {
-          x: 0,
-          y: -1000
+        {
+          id: "9",
+          classes: ["quote"],
+          coordinates: {
+            x: 1000,
+            y: -1500,
+            z: 0,
+          },
+          rotate: {},
+          payload: `
+            <blockquote class="smaller">
+            To walk the circuit is to become one with it. Life-force is a constant. Today, science tells us that the essence of nature is purpose.
+            The goal of four-dimensional superstructures is to plant the seeds of empathy rather than stagnation.
+            You and I are starseeds of the quantum matrix. We exist, we self-actualize, we are reborn. Will is the healing of karma, and of us.
+            If you have never experienced this lightning bolt on a cosmic scale, it can be difficult to believe. Have you found your circuit? How should you navigate this quantum world?
+            It is time to take peace to the next level. The infinite is approaching a tipping point. Eons from now, we mystics will believe like never before as we are guided by the galaxy.
+            The nexus is calling to you via electromagnetic resonance. Can you hear it?
+            Our conversations with other warriors have led to a summoning of pseudo-high-frequency consciousness. Reality has always been electrified with travellers whose bodies are nurtured by guidance. Humankind has nothing to lose.
+            <footer>N.A.Bs.G.</footer>
+            </blockquote>
+          `,
         },
-        rotate: {},
-        scale: 3,
-        payload: `
-          <header>what part of this is</header>
-          <h1>amazing?</h1>
-          <footer>Be delighted. Be grateful. Just don't be surprised.</footer>
-        `
-      },
-      {
-        id: "absence",
-        classes: [
-          "quote"
-        ],
-        coordinates: {
-          x: 0,
-          y: -1500,
-          z: 0
+        {
+          id: "10",
+          classes: [],
+          coordinates: {
+            x: 7700,
+            y: 2000,
+          },
+          rotate: {
+            z: 180,
+          },
+          scale: 4,
+          payload: `
+            <h1>how sweet to be an idiot</h1>
+          `,
         },
-        rotate: {},
-        payload: `
-          <h1>"It's Gone."</h1>
-          <p>Instead of fixating on creation, this story is about proof through <em>absence.</em></p>
-          <p>&nbsp;</p>
-          <p>Your life is <strong>full</strong> of empty tombs.</p>
-        `
-      },
-      {
-        id: "evidence",
-        classes: [],
-        coordinates: {
-          x: 250,
-          y: 3000
+        {
+          id: "11",
+          classes: ["tiny"],
+          coordinates: {
+            x: 6000,
+            y: 4000,
+            z: -2000,
+          },
+          rotate: {},
+          scale: 2,
+          payload: `
+            <p>the emperor's new <strong>conundrum</strong></p>
+          `,
         },
-        rotate: {
-          z: 270
+        {
+          id: "12",
+          classes: [],
+          coordinates: {
+            x: 6700,
+            y: -300,
+          },
+          rotate: {},
+          scale: 6,
+          payload: `
+            <p>
+              a call to faith
+            </p>
+            <p>
+              <strong>(it's not what you think)</strong>
+            </p>
+          `,
         },
-        scale: 5,
-        payload: `
-          <p>
-            <strong>everything</strong> is a footprint
-          </p>
-        `
-      },
-      {
-        id: "redux",
-        classes: [],
-        coordinates: {
-          x: 6700,
-          y: -300
+        {
+          id: "13",
+          classes: ["big"],
+          coordinates: {
+            x: -2500,
+            y: 2000,
+          },
+          rotate: {
+            z: 90,
+          },
+          scale: 4,
+          payload: `
+            <p>
+              I want to be an
+              <strong>adult</strong>
+              <span>I just don't want to grow up</span>
+            </p>
+          `,
         },
-        rotate: {},
-        scale: 6,
-        payload: `
-          <p>
-            lift up your vision
-          </p>
-          <p>
-            <strong>do not be amazed</strong>
-          </p>
-        `
-      },
-      {
-        id: "guides",
-        classes: [],
-        coordinates: {
-          x: 7700,
-          y: 2000
+        {
+          id: "14",
+          classes: ["title"],
+          coordinates: {
+            x: 0,
+            y: -1000,
+          },
+          rotate: {},
+          scale: 3,
+          payload: `
+            <header>like church, but less</header>
+            <h1>huzzah</h1>
+            <footer>more family, tribe, and the sharing of wonder</footer>
+          `,
         },
-        rotate: {
-          z: 180
+        {
+          id: "15",
+          classes: ["quote"],
+          coordinates: {
+            x: 2000,
+            y: -1500,
+            z: 0,
+          },
+          rotate: {},
+          payload: `
+            <h1>Here's the Deal:</h1>
+            <ul>
+              <li>Jargon is a Thought Technology</li>
+              <li>Mystery beats Certainty</li>
+              <li><strong>We need a Reversal of Larceny</strong></li>
+            </ul>
+          `,
         },
-        scale: 4,
-        payload: `
-          <h1>there are guides in every story</h1>
-        `
-      },
-      {
-        id: "solitude",
-        classes: [
-          "tiny"
-        ],
-        coordinates: {
-          x: 6000,
-          y: 4000,
-          z: -2000
+        {
+          id: "16",
+          classes: [],
+          coordinates: {
+            x: 3000,
+            y: 4000,
+            z: 0,
+          },
+          rotate: {
+            x: -70,
+          },
+          scale: 2,
+          payload: `
+            <p>
+              After all,
+              <br />
+              <strong>You're not here for the food.</strong>
+            </p>
+          `,
         },
-        rotate: {},
-        scale: 2,
-        payload: `
-          <p>you were <em>never</em> alone</p>
-        `
-      },
-      {
-        id: "mantra",
-        classes: [
-          "big"
-        ],
-        coordinates: {
-          x: -2500,
-          y: 2000
+        {
+          id: "overview",
+          classes: [],
+          coordinates: {
+            x: 3000,
+            y: 1500,
+            z: 0,
+          },
+          rotate: {},
+          scale: 10,
+          payload: `
+          `,
         },
-        rotate: {
-          z: 90
-        },
-        scale: 4,
-        payload: `
-          <p>
-            look for
-            <strong>one true thing</strong>
-            <span>it's always there</span>
-          </p>
-        `
-      },
-      {
-        id: "message",
-        classes: [],
-        coordinates: {
-          x: 7000,
-          y: 1000,
-          z: 0
-        },
-        rotate: {
-          z: 270
-        },
-        scale: 1,
-        payload: `
-          <p>
-            life and healing is at the core
-          </p>
-        `
-      },
-      {
-        id: "transition",
-        classes: [],
-        coordinates: {
-          x: 7200,
-          y: 1000,
-          z: -100
-        },
-        rotate: {
-          y: 40,
-          z: 270
-        },
-        scale: 1,
-        payload: `
-          <p>
-            from <em>possible</em> to <em>probable</em> to <strong>certain</strong>
-          </p>
-        `
-      },
-      {
-        id: "deal",
-        classes: [
-          "quote"
-        ],
-        coordinates: {
-          x: 1000,
-          y: -1500,
-          z: 0
-        },
-        rotate: {},
-        payload: `
-          <h1>The Beginning:</h1>
-          <ul>
-            <li>The tomb is empty</li>
-            <li>You are not alone</li>
-            <li><strong>Do Not Be Amazed</strong></li>
-          </ul>
-        `
-      },
-      {
-        id: "signoff",
-        classes: [],
-        coordinates: {
-          x: 3000,
-          y: 4000,
-          z: 0
-        },
-        rotate: {
-          x: -70
-        },
-        scale: 2,
-        payload: `
-          <p>
-            Because after all,
-            <br />
-            <strong>Freedom is a Choice.</strong>
-          </p>
-        `
-      },
-      {
-        id: "overview",
-        classes: [],
-        coordinates: {
-          x: 3000,
-          y: 1500,
-          z: 0
-        },
-        rotate: {},
-        scale: 10,
-        payload: `
-        `
-      }
-    ]
-    }
+      ],
+    };
   },
   mounted() {
     impress().init();
-  }
+  },
 });
 
 /*
