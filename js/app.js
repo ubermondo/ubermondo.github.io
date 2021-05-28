@@ -4,10 +4,23 @@ var app = new Vue({
     return {
       slides: [
         {
-          id: "0",
-          classes: ["quote"],
+          id: "title",
+          classes: ["quote", "big"],
           coordinates: {
             x: -1000,
+            y: -1500,
+            z: 0,
+          },
+          rotate: {},
+          payload: `
+            <h1>The Myth of Certainty.</h1>
+          `,
+        },
+        {
+          id: "intro",
+          classes: ["quote"],
+          coordinates: {
+            x: 0,
             y: -1500,
             z: 0,
           },
@@ -19,10 +32,10 @@ var app = new Vue({
           `,
         },
         {
-          id: "1",
+          id: "questions",
           classes: ["quote"],
           coordinates: {
-            x: 0,
+            x: 1000,
             y: -1500,
             z: 0,
           },
@@ -37,7 +50,7 @@ var app = new Vue({
           `,
         },
         {
-          id: "2",
+          id: "slogan",
           classes: ["big"],
           coordinates: {
             x: 3500,
@@ -57,7 +70,7 @@ var app = new Vue({
           `,
         },
         {
-          id: "3",
+          id: "approach",
           classes: [],
           coordinates: {
             x: 7000,
@@ -75,7 +88,7 @@ var app = new Vue({
           `,
         },
         {
-          id: "4",
+          id: "powered",
           classes: [],
           coordinates: {
             x: 7200,
@@ -94,7 +107,7 @@ var app = new Vue({
           `,
         },
         {
-          id: "5",
+          id: "insanity",
           classes: [],
           coordinates: {
             x: 250,
@@ -111,7 +124,7 @@ var app = new Vue({
           `,
         },
         {
-          id: "6",
+          id: "commodity",
           classes: [],
           coordinates: {
             x: 500,
@@ -129,7 +142,7 @@ var app = new Vue({
           `,
         },
         {
-          id: "7",
+          id: "currency",
           classes: ["tiny"],
           coordinates: {
             x: 600,
@@ -145,7 +158,7 @@ var app = new Vue({
           `,
         },
         {
-          id: "8",
+          id: "other",
           classes: [],
           coordinates: {
             x: 6000,
@@ -163,10 +176,10 @@ var app = new Vue({
           `,
         },
         {
-          id: "9",
+          id: "NABSG",
           classes: ["quote"],
           coordinates: {
-            x: 1000,
+            x: 2000,
             y: -1500,
             z: 0,
           },
@@ -185,7 +198,7 @@ var app = new Vue({
           `,
         },
         {
-          id: "10",
+          id: "idiocy",
           classes: [],
           coordinates: {
             x: 7700,
@@ -200,7 +213,7 @@ var app = new Vue({
           `,
         },
         {
-          id: "11",
+          id: "conundrum",
           classes: ["tiny"],
           coordinates: {
             x: 6000,
@@ -214,7 +227,7 @@ var app = new Vue({
           `,
         },
         {
-          id: "12",
+          id: "faith",
           classes: [],
           coordinates: {
             x: 6700,
@@ -232,7 +245,7 @@ var app = new Vue({
           `,
         },
         {
-          id: "13",
+          id: "adulthood",
           classes: ["big"],
           coordinates: {
             x: -2500,
@@ -251,7 +264,7 @@ var app = new Vue({
           `,
         },
         {
-          id: "14",
+          id: "renaissance",
           classes: ["title"],
           coordinates: {
             x: 0,
@@ -266,10 +279,10 @@ var app = new Vue({
           `,
         },
         {
-          id: "15",
+          id: "deal",
           classes: ["quote"],
           coordinates: {
-            x: 2000,
+            x: 3000,
             y: -1500,
             z: 0,
           },
@@ -284,7 +297,7 @@ var app = new Vue({
           `,
         },
         {
-          id: "16",
+          id: "summary",
           classes: [],
           coordinates: {
             x: 3000,
