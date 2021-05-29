@@ -290,7 +290,7 @@ var app = new Vue({
           payload: `
             <h1>Here's the Deal:</h1>
             <ul>
-              <li>Jargon is a Thought Technology</li>
+              <li>Jargon is a <span class="size wait long">Thought</span> Technology</li>
               <li>Mystery beats Certainty</li>
               <li><strong>We need a Reversal of Larceny</strong></li>
             </ul>
