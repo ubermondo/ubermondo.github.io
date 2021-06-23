@@ -220,7 +220,7 @@ var app = new Vue({
             <p>
               and then there's
               <strong>that</strong>
-              <span>damn</span>
+              <span>damned</span>
               <strong>slogan.</strong>
             </p>
           `,
@@ -241,11 +241,8 @@ var app = new Vue({
             </blockquote>
           `,
         },
-        
-        
-        
         {
-          id: "adulthood",
+          id: "narcissism",
           classes: ["big"],
           coordinates: {
             x: -2500,
@@ -257,29 +254,14 @@ var app = new Vue({
           scale: 4,
           payload: `
             <p>
-              I want to be an
-              <strong>adult</strong>
-              <span>I just don't want to grow up</span>
+              is it
+              <strong>me</strong>
+              <span>or the rest of the world?</span>
             </p>
           `,
         },
         {
-          id: "renaissance",
-          classes: ["title"],
-          coordinates: {
-            x: 0,
-            y: -1000,
-          },
-          rotate: {},
-          scale: 3,
-          payload: `
-            <header>like church, but less</header>
-            <h1>huzzah</h1>
-            <footer>more family, tribe, and the sharing of wonder</footer>
-          `,
-        },
-        {
-          id: "deal",
+          id: "dispelling",
           classes: ["quote"],
           coordinates: {
             x: 3000,
@@ -288,12 +270,63 @@ var app = new Vue({
           },
           rotate: {},
           payload: `
-            <h1>Here's the Deal:</h1>
+            <h1>Important Questions:</h1>
             <ul>
-              <li>Jargon is a <span class="size wait long">Thought</span> Technology</li>
-              <li>Mystery beats Certainty</li>
-              <li><strong>We need a Reversal of Larceny</strong></li>
+              <li>does it impact rich people?</li>
+              <li>do you change, or do you incorporate?</li>
+              <li><strong>who cares?</strong></li>
             </ul>
+          `,
+        },
+        {
+          id: "boring",
+          classes: ["title"],
+          coordinates: {
+            x: 0,
+            y: -1000,
+          },
+          rotate: {},
+          scale: 3,
+          payload: `
+            <header>don't be so</header>
+            <h1>closed off</h1>
+            <footer>(believe my insane theory)</footer>
+          `,
+        },
+        {
+          id: "messiness",
+          classes: ["medium"],
+          coordinates: {
+            x: 7000,
+            y: 4500,
+            z: -1000,
+          },
+          rotate: {
+            z: 180
+          },
+          scale: 2,
+          payload: `
+            <p>bless this mess</p>
+          `,
+        },
+        {
+          id: "gandalf",
+          classes: ["quote"],
+          coordinates: {
+            x: 4000,
+            y: -1500,
+            z: 0,
+          },
+          rotate: {},
+          payload: `
+          <blockquote class="smaller">
+          <p>
+          Some believe it is only great power that can hold evil in check, but that is not what I have found. 
+          I found it is the small everyday deeds of ordinary folk that keep the darkness at bay. 
+          Small acts of kindness and love.
+          </p>
+          <footer>Gandalf</footer>
+          </blockquote>
           `,
         },
         {
@@ -312,7 +345,7 @@ var app = new Vue({
             <p>
               After all,
               <br />
-              <strong>You're not here for the food.</strong>
+              <strong>Life's a <em>journey,</em> man.</strong>
             </p>
           `,
         },
