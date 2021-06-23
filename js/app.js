@@ -5,7 +5,7 @@ var app = new Vue({
       slides: [
         {
           id: "title",
-          classes: ["quote", "big"],
+          classes: ["quote", "medium", "right"],
           coordinates: {
             x: -1000,
             y: -1500,
@@ -13,11 +13,28 @@ var app = new Vue({
           },
           rotate: {},
           payload: `
-            <h1>The Myth of Certainty.</h1>
+            <h1>The Mechanisms of Comfort.</h1>
           `,
         },
         {
-          id: "intro",
+          id: "disneyworld",
+          classes: [],
+          coordinates: {
+            x: 250,
+            y: 3000,
+          },
+          rotate: {
+            z: 270,
+          },
+          scale: 5,
+          payload: `
+            <p>
+              "I'm going to <strong>Disney World!</strong>"
+            </p>
+          `,
+        },
+        {
+          id: "rohde",
           classes: ["quote"],
           coordinates: {
             x: 0,
@@ -26,51 +43,57 @@ var app = new Vue({
           },
           rotate: {},
           payload: `
-            <h1>The Cheesecake Factory is not your friend.</h1>
-            <p>&nbsp;</p>
-            <p>(it's in the <em>name.</em>)</p>
+          <blockquote class="smaller">
+          <p>
+          The danger of imaginary worlds is that they make too much sense, become predictable, and fail to hold our interest.
+          </p>
+          <br />
+          <p>
+          The danger of the real world is that it becomes so confusing and contradictory that we abandon it for an imaginary world.
+          </p>
+          <br />
+          <p>
+          An imaginary world derives its power not from how realistic it is, but from how <strong>meaningful</strong> it is.
+          </p>
+          <footer>Joe Rohde</footer>
+          </blockquote>
           `,
         },
         {
-          id: "questions",
-          classes: ["quote"],
+          id: "breakdown",
+          classes: [],
           coordinates: {
-            x: 1000,
-            y: -1500,
-            z: 0,
-          },
-          rotate: {},
-          payload: `
-            <h1>Questions:</h1>
-            <ul>
-              <li>who <em>built</em> this?</li>
-              <li>can I have a <em>bookmark?</em></li>
-              <li>is this <em>wicker?</em></li>
-            </ul>
-          `,
-        },
-        {
-          id: "slogan",
-          classes: ["big"],
-          coordinates: {
-            x: 3500,
-            y: 2100,
+            x: 6000,
+            y: 3000,
           },
           rotate: {
-            z: 180,
+            z: 90,
           },
-          scale: 6,
+          scale: 5,
           payload: `
-            <p>
-              you're not here for the
-              <strong>food.</strong>
-              <span>you're here to be</span>
-              <strong>confused.</strong>
+          a <em class="spin wait short">breakdown</em> in the monopoly of meaning.
+          `,
+        },
+        {
+          id: "prosperity",
+          classes: [],
+          coordinates: {
+            x: 500,
+            y: 500,
+          },
+          rotate: {
+            z: 90,
+          },
+          scale: 1,
+          payload: `
+            <h2>Prosperity Lessons from Victor Frankenstein</h2>
+            <p class="size">
+              (and the role of the "other")
             </p>
           `,
         },
         {
-          id: "approach",
+          id: "bikeryoga",
           classes: [],
           coordinates: {
             x: 7000,
@@ -83,12 +106,12 @@ var app = new Vue({
           scale: 1,
           payload: `
             <p>
-              the <em class="spin wait short">sensory overload</em> approach.
+              What do Hell's Angels and Yoga Teachers have in Common?
             </p>
           `,
         },
         {
-          id: "powered",
+          id: "finger",
           classes: [],
           coordinates: {
             x: 7200,
@@ -102,47 +125,28 @@ var app = new Vue({
           scale: 1,
           payload: `
             <p>
-              powered by <em>larceny.</em>
+              middle-finger politics.
             </p>
           `,
         },
         {
-          id: "insanity",
-          classes: [],
+          id: "frankl",
+          classes: ["quote"],
           coordinates: {
-            x: 250,
-            y: 3000,
+            x: 1000,
+            y: -1500,
+            z: 0,
           },
-          rotate: {
-            z: 270,
-          },
-          scale: 5,
+          rotate: {},
           payload: `
-            <p>
-              the insane trade
-            </p>
+            <blockquote>
+            When a person can't find a deep sense of <strong>meaning</strong>, they distract themselves with <strong>pleasure</strong>.
+            <footer>Viktor Frankl</footer>
+            </blockquote>
           `,
         },
         {
-          id: "commodity",
-          classes: [],
-          coordinates: {
-            x: 500,
-            y: 500,
-          },
-          rotate: {
-            z: 90,
-          },
-          scale: 1,
-          payload: `
-            <h2>Secrets are the Commodity</h2>
-            <p class="size">
-              (top tricks experts don't want you to know about)
-            </p>
-          `,
-        },
-        {
-          id: "currency",
+          id: "saltlamp",
           classes: ["tiny"],
           coordinates: {
             x: 600,
@@ -154,51 +158,11 @@ var app = new Vue({
           },
           scale: 1,
           payload: `
-            <p>wrongness is the currency</p>
+            <p>wanna buy a salt lamp?</p>
           `,
         },
         {
-          id: "other",
-          classes: [],
-          coordinates: {
-            x: 6000,
-            y: 3000,
-          },
-          rotate: {
-            z: 90,
-          },
-          scale: 5,
-          payload: `
-            <p>
-              <h2>response to the "other"</h2>
-              and hair care tips
-            </p>
-          `,
-        },
-        {
-          id: "NABSG",
-          classes: ["quote"],
-          coordinates: {
-            x: 2000,
-            y: -1500,
-            z: 0,
-          },
-          rotate: {},
-          payload: `
-            <blockquote class="smaller">
-            To walk the circuit is to become one with it. Life-force is a constant. Today, science tells us that the essence of nature is purpose.
-            The goal of four-dimensional superstructures is to plant the seeds of empathy rather than stagnation.
-            You and I are starseeds of the quantum matrix. We exist, we self-actualize, we are reborn. Will is the healing of karma, and of us.
-            If you have never experienced this lightning bolt on a cosmic scale, it can be difficult to believe. Have you found your circuit? How should you navigate this quantum world?
-            It is time to take peace to the next level. The infinite is approaching a tipping point. Eons from now, we mystics will believe like never before as we are guided by the galaxy.
-            The nexus is calling to you via electromagnetic resonance. Can you hear it?
-            Our conversations with other warriors have led to a summoning of pseudo-high-frequency consciousness. Reality has always been electrified with travellers whose bodies are nurtured by guidance. Humankind has nothing to lose.
-            <footer>N.A.Bs.G.</footer>
-            </blockquote>
-          `,
-        },
-        {
-          id: "idiocy",
+          id: "mysticaldata",
           classes: [],
           coordinates: {
             x: 7700,
@@ -209,25 +173,11 @@ var app = new Vue({
           },
           scale: 4,
           payload: `
-            <h1>how sweet to be an idiot</h1>
+            <h1><span class="size wait short">data</span> <span class="size wait medium">isn't</span> <span class="size wait long">mystical</span></h1>
           `,
         },
         {
-          id: "conundrum",
-          classes: ["tiny"],
-          coordinates: {
-            x: 6000,
-            y: 4000,
-            z: -2000,
-          },
-          rotate: {},
-          scale: 2,
-          payload: `
-            <p>the emperor's new <strong>conundrum</strong></p>
-          `,
-        },
-        {
-          id: "faith",
+          id: "equation",
           classes: [],
           coordinates: {
             x: 6700,
@@ -237,13 +187,63 @@ var app = new Vue({
           scale: 6,
           payload: `
             <p>
-              a call to faith
-            </p>
-            <p>
-              <strong>(it's not what you think)</strong>
+              comfort + control ≠ success
             </p>
           `,
         },
+        {
+          id: "singularities",
+          classes: ["tiny"],
+          coordinates: {
+            x: 6000,
+            y: 4000,
+            z: -2000,
+          },
+          rotate: {},
+          scale: 2,
+          payload: `
+            <p>sharpeners, singularities, and solutionism</p>
+          `,
+        },
+        {
+          id: "journey",
+          classes: ["big"],
+          coordinates: {
+            x: 3500,
+            y: 2100,
+          },
+          rotate: {
+            z: 180,
+          },
+          scale: 6,
+          payload: `
+            <p>
+              and then there's
+              <strong>that</strong>
+              <span>damn</span>
+              <strong>slogan.</strong>
+            </p>
+          `,
+        },
+        {
+          id: "happiest",
+          classes: ["quote"],
+          coordinates: {
+            x: 2000,
+            y: -1500,
+            z: 0,
+          },
+          rotate: {},
+          payload: `
+            <blockquote>
+            Just because this is the Happiest Place on Earth doesn't mean I can't beat you until you cry.
+            <footer>every parent ever</footer>
+            </blockquote>
+          `,
+        },
+        
+        
+        
         {
           id: "adulthood",
           classes: ["big"],
