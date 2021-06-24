@@ -125,7 +125,7 @@ var app = new Vue({
           scale: 1,
           payload: `
             <p>
-              middle-finger politics.
+              middle-finger mindset.
             </p>
           `,
         },
