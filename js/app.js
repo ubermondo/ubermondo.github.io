@@ -344,7 +344,7 @@ var app = new Vue({
           scale: 2,
           payload: `
             <p>
-              After all,
+              because
               <br />
               <strong>Life's a <em>journey,</em> man.</strong>
             </p>
