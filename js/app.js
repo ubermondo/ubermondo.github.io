@@ -274,6 +274,7 @@ var app = new Vue({
             <ul>
               <li>does it impact rich people?</li>
               <li>do you change, or do you incorporate?</li>
+              <li>who benefits?</li>
               <li><strong>who cares?</strong></li>
             </ul>
           `,
